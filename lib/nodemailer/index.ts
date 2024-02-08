@@ -82,7 +82,7 @@ const transporter=nodemailer.createTransport({
   port:2525,
   auth:{
     user:'piyushjha15042@outlook.com',
-    pass:process.env.EMAIL_PASSWORD,
+    pass:process.env.EMAIL_PASSWORD  ,
   }, 
   maxConnections:1
 })
