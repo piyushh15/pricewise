@@ -9,7 +9,7 @@ const Home = async() => {
   const allProducts=await getAllProducts();
   return (
     <>
-    <section className="px-6 md:px-20 py-24 border-2 border-red-500">
+    <section className="px-6 md:px-20 ">
       <div className="flex max-xl:flex-col gap-16">
         <div className="flex flex-col justify-center">
           <p className="small-text">
@@ -17,7 +17,7 @@ const Home = async() => {
           </p>
           <h1 className="head-text">
             Unleash the Power of 
-            <span className="text-primary"> Pricewise</span>
+            <span className="text-primary"> PriceTrack</span>
           </h1>
           <p className="mt-6">
             Powerful,self-serve product and growth analytics to help you converge,engage and retain more.

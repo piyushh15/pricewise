@@ -14,7 +14,7 @@ const heroImages=[
 ]
 const HeroCarousel = () => {
     return (
-        <div className='hero-carousel'>
+        <div className='hero-carousel m-0 p-0'>
             <Carousel showThumbs={false} 
              autoPlay 
             infiniteLoop 
