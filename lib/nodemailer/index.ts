@@ -88,16 +88,18 @@ const transporter=nodemailer.createTransport({
 })
 
 
-export const sendEmail=async(emailContent:EmailContent,sendTo:string[])=>{
-  const mailOptions={
-    from:'piyushjha15042@outlook.com',
-    to:sendTo,
-    html:emailContent.body,
-    subject:emailContent.subject,
-  }
-  transporter.sendMail(mailOptions,(error:any,info:any)=>{
-    if(error)return console.log(error);
-    console.log('Email sent:',info);
-  })
+export const sendEmail = async (emailContent: EmailContent, sendTo: string[]) => {
+  const mailOptions = {
+    from: 'piyushjha15042@outlook.com',
+    to: sendTo,
+    html: emailContent.body,
+    subject: emailContent.subject,
+  };
 
-}
+  try {
+    const info = await transporter.sendMail(mailOptions);
+    console.log('Email sent:', info);
+  } catch (error) {
+    console.log(error);
+  }
+};
